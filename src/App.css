@@ -1,38 +1,50 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Merriweather+Sans:wght@300;400;500;600;700;800&family=Varela+Round&family=Zen+Antique+Soft&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+:root{
+  --font-heading: 'Zen Antique Soft', serif;
+  --font-text: 'Merriweather Sans', sans-serif;
+  --font-text1: 'Bebas Neue', cursive;
+  --font-text2: 'Varela Round', sans-serif;
+  --shadow: 2px ​5px 20px rgba(0 0 0 / 0.3);
+  --color-heading: #36536b;
+  --color-backgroundCircle: #749bbb98;
+  --padding-xy: 10vw;
+  --margin: 10vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+body{
+  overflow-x: hidden;
+  height: 100vh;
+  width: 100vw;
+  background-color: aliceblue;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.App{
+  overflow-x: hidden;
 }
-
-.App-link {
-  color: #61dafb;
+button, input{
+  background-color: #fff;
+  outline: none;
+  display: block;
+  border-color: transparent;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.backgroundCircle{
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: var(--color-backgroundCircle);
+  border-radius: 50%;
+  z-index: -1;
+}
+@media screen and (max-width: 1000px) {
+  :root{
+    --padding-xy: 7vw;
   }
 }

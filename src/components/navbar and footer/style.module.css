@@ -1,0 +1,95 @@
+@import url("../../App.css");
+
+.header {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  padding: 20px var(--padding-xy);
+}
+.header > div {
+  display: flex;
+  align-items: center;
+  z-index: 1;
+}
+.logoDiv > img {
+  width: 81px;
+}
+.navigationDiv {
+  margin: 0 0 0 60px;
+}
+.ul {
+  display: flex;
+}
+.ul > li {
+  list-style: none;
+  padding: 5px 15px;
+  font-family: var(--font-text);
+  font-weight: 600;
+  color: rgba(0 0 0 / 0.6);
+  font-size: 16px;
+  transition: 0.1s;
+}
+.ul > li:hover {
+  cursor: pointer;
+  color: rgba(0 0 0 / 1);
+}
+.btnActionsDiv{
+  justify-content: center;
+}
+.footer {
+  background-color: var(--color-heading);
+  position: relative;
+  overflow: hidden;
+}
+.socialAccounts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.socialAccounts svg {
+  margin: 0 15px;
+}
+footer > .logoDiv > img {
+  width: 50px;
+}
+footer > .logoDiv > .navigationDiv > .ul > li {
+  color: #fff;
+}
+.backgroundCircle {
+  top: -240px;
+  right: -454px;
+}
+
+@media screen and (max-width: 750px) {
+  nav.header{
+    grid-template-columns: none;
+  }
+  nav > .btnActionsDiv{
+    display: none;
+  }
+  footer.header{
+    grid-template-columns: 1fr 1fr;
+  }
+  footer > .logoDiv > .navigationDiv {
+    display: none;
+  }
+}
+@media screen and (max-width: 500px) {
+  nav > .logoDiv{
+    flex-direction: column;
+  }
+  nav > .logoDiv > .navigationDiv{
+    margin: 0;
+  }
+  footer.header{
+    grid-template-columns: none;
+    padding: 5px var(--padding-xy);
+  }
+  footer > .logoDiv {
+    display: flex;
+    justify-content: center;
+    margin: 0 0 5px 0;
+  }
+  footer > .logoDiv svg {
+    width: 30px;
+  }
+}
