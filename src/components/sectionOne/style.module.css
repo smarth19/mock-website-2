@@ -58,7 +58,7 @@
 @media screen and (max-width: 750px) {
   .section {
     grid-template-columns: none;
-    height: 80vh;
+    min-height: 80vh;
   }
   .section > div {
     padding: 0 50px;
